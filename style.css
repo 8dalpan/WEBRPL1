@@ -1,0 +1,89 @@
+/* Ensure the video scales properly for mobile devices */
+
+/* General Styles */
+body {
+  background-color: #141414;
+  color: white;
+}
+
+.hero-section {
+  background-image: url("/img/AGF_1098.JPG");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel img {
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  padding: 20px;
+  background-color: black;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Button Styles */
+.btn-play,
+.btn-wishlist {
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+.btn-play {
+  background-color: red;
+  color: white;
+}
+
+.btn-wishlist {
+  background-color: white;
+  color: black;
+}
+
+#video-container {
+  max-width: 100%;
+  height: auto;
+}
+/* Responsive video container */
+.responsive-video {
+  width: 100%;
+  max-width: 100%; /* Ensures the video doesn’t exceed the container's width */
+}
+
+/* Adjustments for the video content */
+.video-content {
+  width: 100%; /* Make video take full width on mobile */
+  height: 450px;
+  max-width: 640px; /* For desktop, limit max width to 640px */
+  border-radius: 30px; /* Add some border-radius if needed */
+}
+
+@media (max-width: 576px) {
+  #myVideo {
+    width: 100%;
+    height: auto;
+  }
+}
